@@ -1,1 +1,99 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+}
 
+header {
+  width: 100%;
+  background-color: #404041;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+  color: #e6e7e8;
+}
+
+span {
+  font-weight: 700;
+  color: #ed458b;
+}
+
+.main-sect {
+  margin: auto;
+  text-align: center;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 1%;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+button {
+  width: 90%;
+  background-color: #929497;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 5px 0;
+  border: 0;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+button:hover:enabled {
+  background-color: #EB008B;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #D0D2D3;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.7em;
+  color: #404041;
+  margin: 10px 0;
+}
+
+h3 {
+  color: #EB008B;
+  font-size: 5em;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media screen and (min-width: 550px){
+  h1{
+    font-size: 2.5em;
+  }
+    input {
+    width: 40%;
+  }
+    section button {
+    width: 15%;
+    margin: 20px 10px;
+  }
+
+  h2 {
+    font-size: 2.5em
+  }
+
+  h3 {
+    font-size: 6em;
+  }
+
+  #reset{
+    margin: 10px 10px;
+  }
+}
