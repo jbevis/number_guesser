@@ -8,19 +8,19 @@
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <h1><span>Number</span> Guesser</h1>
   </header>
-  <section class="main-sect">
+  <section class="main-sect" role="main section of game">
     <input type="number" id="num-guess" placeholder="Guess a number..."/>
     <section class="buttons">
       <button id="guess" disabled="true">Guess</button>
       <button id="clear" disabled="true">Clear</button>
     </section>
     <section class="body-text">
-      <h2 class="normal-text" id="last-guess-was">Your last guess was</h2>
-      <h3 id="last-guess">?</h3>
-      <h2 class="normal-text" id="results">...Results...</h2>
+      <h2 class="normal-text" role="user's last guess" id="last-guess-was">Your last guess was</h2>
+      <h3 id="last-guess" role="user's last number">?</h3>
+      <h2 class="normal-text" role="results of game" id="results">(...Results...)</h2>
     </section>
     <button id="reset" disabled>Reset</button>
   </section>
