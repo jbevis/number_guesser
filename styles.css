@@ -31,7 +31,6 @@ span {
 input {
   width: 80%;
   margin-top: 30px;
-  margin-left: 1%;
   font-size: 1.5em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -59,14 +58,14 @@ button:disabled {
   background-color: #D0D2D3;
 }
 
-h2 {
+p {
   font-weight: 300;
   font-size: 1.7em;
   color: #404041;
   margin: 10px 0;
 }
 
-h3 {
+#last-guess {
   color: #EB008B;
   font-size: 5em;
   font-weight: 300;
@@ -85,11 +84,11 @@ h3 {
     margin: 20px 10px;
   }
 
-  h2 {
+  p {
     font-size: 2.5em
   }
 
-  h3 {
+  #last-guess {
     font-size: 6em;
   }
 
