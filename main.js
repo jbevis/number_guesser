@@ -20,12 +20,34 @@ window.onload = function () {
 }
 
 
+
+// guess button and clear button need to be disabled.
+//Set default in HTML to disabled.
+//function to check if input has a value, and reactivates buttons
+function checkInput () {
+  var inputValue = document.getElementById('num-guess').value
+  if (inputValue === ""){
+    clearBtn.disabled = true;
+    guessBtn.disabled = true;
+    resetBtn.disabled = true;
+  };
+};
+
+userGuess.addEventListener('keyup', function(){
+  clearBtn.disabled = false;
+  guessBtn.disabled = false;
+  resetBtn.disabled = false;
+})
+
 //user enters number and submits. Random # is generated, user number is displayed below.
 // within each statement pass queryselector to change #results innertext to appropriate response.
 // if inside of an if....test if number is in range...if it is then run results conditional else alert number is outside the range, try again...
+//if time...new conditional if submittedNum == NaN...error, calls window reload.
 
 guessBtn.addEventListener('click', function(){
+  checkInput();
   var submittedNum = userGuess.value;
+  parseInt(submittedNum, 10);
   displayNum.innerText = submittedNum;
   console.log('You have guessed ' + submittedNum)
   var feedBack = document.querySelector('#results');
@@ -41,13 +63,20 @@ guessBtn.addEventListener('click', function(){
   } else if (submittedNum < minNum || submittedNum > maxNum) {
     alert("Your guess is outside the range!")
     feedBack.innerText =  "Your guess is outside the range, reset and try again"
-  }
-})
+    }
+  });
+
+
+
+
+
+
 
 
 // clear button clears user input field
 clearBtn.addEventListener('click', function(){
-  userGuess.value = null;
+  userGuess.value = "";
+  checkInput();
   console.log("clear field")
 })
 
@@ -56,12 +85,10 @@ clearBtn.addEventListener('click', function(){
 // function to clear out user's submitted number
 // generate new random number once clicked.
 resetBtn.addEventListener('click', function(){
-  window.onload();
-  userGuess.value = null;
-  displayNum.innerText ="Enter a number between 1 and 100";
+  // window.onload();
+  userGuess.value = "";
+  displayNum.innerText ="?";
   feedBack.innerText = "Results";
+  checkInput();
   console.log('Reset Game');
 })
-
-
-//clearBtn and resetBtn should be inactive IF nothing entered in the input field.
