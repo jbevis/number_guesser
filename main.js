@@ -85,7 +85,7 @@ clearBtn.addEventListener('click', function(){
 // function to clear out user's submitted number
 // generate new random number once clicked.
 resetBtn.addEventListener('click', function(){
-  // window.onload();
+  window.onload();
   userGuess.value = "";
   displayNum.innerText ="?";
   feedBack.innerText = "Results";
